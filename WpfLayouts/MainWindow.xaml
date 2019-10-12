@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfLayouts.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfLayouts"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" Height="450" Width="800">
+        
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="File">
+                <MenuItem Header="Open" RenderTransformOrigin="0.75,0.818"></MenuItem>
+                <MenuItem Header="Close"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="Edit">
+                <MenuItem Header="Copy"></MenuItem>
+                <MenuItem Header="Paste"></MenuItem>
+            </MenuItem>
+        </Menu>
+        
+        <StackPanel x:Name="StackPanel" DockPanel.Dock="Top" Orientation="Horizontal">
+            
+        </StackPanel>
+        
+        <Button Content="Statusbar" DockPanel.Dock="Bottom"></Button>
+        <Button Content="Toolbox" DockPanel.Dock="Left"></Button>
+        <Button Content="Solution/Properties" DockPanel.Dock="Right"></Button>
+        <Button Content="Content"></Button>
+    </DockPanel>
+</Window>
