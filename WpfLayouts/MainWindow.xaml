@@ -23,10 +23,66 @@
         <StackPanel x:Name="StackPanel" DockPanel.Dock="Top" Orientation="Horizontal">
             
         </StackPanel>
+              
         
-        <Button Content="Statusbar" DockPanel.Dock="Bottom"></Button>
-        <Button Content="Toolbox" DockPanel.Dock="Left"></Button>
-        <Button Content="Solution/Properties" DockPanel.Dock="Right"></Button>
+        <DockPanel DockPanel.Dock="Bottom">
+            <Label Margin="1" Content="last action" DockPanel.Dock="Left"/>
+            <Label Margin="1" HorizontalAlignment="Right" Content="C:\Temp\Dummy.txt" DockPanel.Dock="Right"/>            
+            <Label Margin="1" HorizontalAlignment="Center" Content="Line 10 Column 20" />
+        </DockPanel>        
+        
+        <Grid DockPanel.Dock="Left">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="30"/>
+                
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="30"/>
+                <ColumnDefinition Width="120"/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Column="1" Grid.Row="0">Label</Label>
+            <Label Grid.Column="1" Grid.Row="1">Button</Label>
+            <Label Grid.Column="1" Grid.Row="2">TextBox</Label>
+            <Label Grid.Column="1" Grid.Row="3">Image</Label>
+            <Label Grid.Column="1" Grid.Row="4">ListBox</Label>
+                        
+        </Grid>
+               
+        <Grid DockPanel.Dock="Right">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="200"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="150"/>                
+            </Grid.ColumnDefinitions>            
+
+            <StackPanel Grid.Column="0" Grid.Row="0">
+                <Label Content="Solution laskdjfka"></Label>
+                <Button Content="xxx"></Button>
+                <Button Content="yyy"></Button>
+            </StackPanel>            
+
+            <StackPanel Grid.Column="0" Grid.Row="2">
+                <Label Content="Properties"></Label>
+                <Label Content="Text:"></Label>
+                <TextBox></TextBox>
+                <Label Content="UndoLimit"></Label>
+                <TextBox></TextBox>
+            </StackPanel>
+
+            <GridSplitter Grid.Column="0" Grid.Row="1" HorizontalAlignment="Stretch" VerticalAlignment="Center" Width="5"></GridSplitter>
+        </Grid>      
+        
+        
+
         <Button Content="Content"></Button>
     </DockPanel>
 </Window>
